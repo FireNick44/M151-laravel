@@ -112,15 +112,19 @@
     }
 </style>
 
-<form method="POST" action="?">
-    <input type="email" name="emailAdress" placeholder="email"><br>
-    <input type="text" name="firstName" placeholder="first name"><br>
-    <input type="text" name="lastName" placeholder="last name"><br>
-    <textarea cols="40" rows="5">Bemerkung</textarea>
+<form action="/form" method="post">
+    @csrf
+    <input type="text" name="firstName" id="firstName" placeholder="First Name"><br>
+    <input type="text" name="lastName" id="lastName" placeholder="Last Name"><br>
+    <input type="email" name="email" id="email" placeholder="Email address"><br>
+    <input type="text" name="notes" id="notes" placeholder="Notes"><br>
+
+    <input type="radio" value="yes" name="application" id="yes">
+    <label for="yes">dabei</label>
+    <input type="radio" value="no" name="application" id="no">
+    <label for="no">nicht dabei</label>
 
 
-
-    <button type="submit">Erstellen</button>
+    <button type="submit">schicken</button>
 </form>
-
 
