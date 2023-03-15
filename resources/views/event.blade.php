@@ -112,7 +112,7 @@
     }
 </style>
 
-<form action="/form" method="post">
+<form action="?" method="post">
     @csrf
     <input type="text" name="firstname" id="firstName" placeholder="First Name"><br>
     <input type="text" name="lastname" id="lastName" placeholder="Last Name"><br>
@@ -127,4 +127,4 @@
     <button type="submit">schicken</button>
 </form>
 
-<a href="event/applications"></a>
+<a href="applications">applicationsdons</a>

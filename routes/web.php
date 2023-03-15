@@ -13,30 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/form', function () {
-    return view('form');
-});
-
-Route::post('/form', function () {
-    $request = request();
-
-    $application = new \App\Models\Application();
-    $application->firstname = $request->get('firstname');
-    $application->lastname = $request->get('lastname');
-    $application->email = $request->get('email');
-    $application->answer = $request->get('answer');
-    $application->session_id = session()->getId();
-    $application->save();
-
-    redirect('form');
-});
-
-Route::get('/form/applications', function () {
-    $application = \App\Models\Application::all();
-
-    return view('form');
-});
+Route::get('/', [\App\Http\Controllers\EventController::class, 'list']);
+Route::post('/event', [\App\Http\Controllers\ApplicationController::class, 'create']);
+Route::get('/event/applications', [\App\Http\Controllers\ApplicationController::class, 'list']);
+Route::get('/event/{id}', [\App\Http\Controllers\EventController::class, 'show']);
+Route::post('/event/{id}', [\App\Http\Controllers\ApplicationController::class, 'create']);
