@@ -114,17 +114,17 @@
 
 <form action="/form" method="post">
     @csrf
-    <input type="text" name="firstName" id="firstName" placeholder="First Name"><br>
-    <input type="text" name="lastName" id="lastName" placeholder="Last Name"><br>
+    <input type="text" name="firstname" id="firstName" placeholder="First Name"><br>
+    <input type="text" name="lastname" id="lastName" placeholder="Last Name"><br>
     <input type="email" name="email" id="email" placeholder="Email address"><br>
     <input type="text" name="notes" id="notes" placeholder="Notes"><br>
 
-    <input type="radio" value="yes" name="application" id="yes">
+    <input type="radio" value="yes" name="answer" id="yes">
     <label for="yes">dabei</label>
-    <input type="radio" value="no" name="application" id="no">
+    <input type="radio" value="no" name="answer" id="no">
     <label for="no">nicht dabei</label>
-
 
     <button type="submit">schicken</button>
 </form>
 
+<a href="event/applications"></a>
