@@ -16,6 +16,6 @@
        @endforeach
     </ul>
 
-    <p>Anzahl der Personen die nich dabeii; {{$declinedapplications}}</p>
+    <p>Anzahl der Personen die nich dabeii; {{$declinedApplications}}</p>
 </body>
 </html>

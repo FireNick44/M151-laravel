@@ -127,4 +127,4 @@
     <button type="submit">schicken</button>
 </form>
 
-<a href="applications">applicationsdons</a>
+<a href="{{$id}}/applications">applicationsdons</a>

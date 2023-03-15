@@ -13,8 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\EventController::class, 'list']);
+Route::get('/', [\App\Http\Controllers\EventController::class, 'events']);
 Route::post('/event', [\App\Http\Controllers\ApplicationController::class, 'create']);
-Route::get('/event/applications', [\App\Http\Controllers\ApplicationController::class, 'list']);
+Route::get('/events', [\App\Http\Controllers\EventController::class, 'events']);
+Route::get('/event/{id}/applications', [\App\Http\Controllers\ApplicationController::class, 'list']);
 Route::get('/event/{id}', [\App\Http\Controllers\EventController::class, 'show']);
 Route::post('/event/{id}', [\App\Http\Controllers\ApplicationController::class, 'create']);

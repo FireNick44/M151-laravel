@@ -17,7 +17,7 @@ class EventFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->words(5,true),
+            'title' => $this->faker->words(5,true),
             'description' => $this->faker->paragraph,
             'date' => $this->faker->dateTimeThisMonth()->format('d,M,Y')
         ];

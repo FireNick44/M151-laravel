@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Application;
 use App\Models\Event;
 use Illuminate\Database\Seeder;
 
@@ -14,7 +15,10 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         Event::truncate();
-        Event::factory()->count(100)->create();
+        Event::factory()->count(50)->create();
+
+        Application::truncate();
+        Application::factory()->count(500)->create();
 
         // \App\Models\User::factory(10)->create();
 
