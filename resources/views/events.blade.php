@@ -53,5 +53,51 @@
         margin-bottom: 10px;
         max-width: 500px;
     }
+    /* Reset styles */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Set body styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        margin: 0;
+    }
+
+    /* Set h1 styles */
+    h1 {
+        font-size: 36px;
+        color: #2e2e2e;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    /* Set ul styles */
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Set li styles */
+    li {
+        font-size: 24px;
+        color: #2e2e2e;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    /* Set p styles */
+    p {
+        font-size: 18px;
+        color: #2e2e2e;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+
 </style>
 </html>

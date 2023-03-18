@@ -9,6 +9,14 @@ class ApplicationController extends Controller
 {
     public function create($id)
     {
+
+        request()->validate([
+            'firstname' => ['required','max:200','min:3'],
+            'lastname'=> ['required','max:200','min:3'],
+            'email'=> ['required','email'],
+            'answer'=> ['required','max:200'],
+        ]);
+
         $request = request();
 
         $application = new \App\Models\Application();
