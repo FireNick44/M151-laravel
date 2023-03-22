@@ -11,4 +11,6 @@ class Application extends Model
 
     //public $table = 'applications';
     //public $primaryKey = 'applicationId';
+
+    public $guarded = [];
 }
