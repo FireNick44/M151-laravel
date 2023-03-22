@@ -32,7 +32,7 @@ Next, you will need to install the project dependencies by running the following
 
 Execute in Laragon-Console, step for step:
 
-0. Direct to the correct folder. Can change, depends on your `laragon/www/` fodler
+0. Direct to the correct folder. Can change, depends on your `laragon/www/` folder
 
 ```
 cd laravel
