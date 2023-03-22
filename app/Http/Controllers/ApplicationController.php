@@ -30,7 +30,7 @@ class ApplicationController extends Controller
     public function list($id){
 
 
-        $applications = $event
+        //$applications = $event
 
         $applications = Application::where('answer', 'yes')->where('event_id', $id)->get();
         $declinedApplications = Application::where('answer', 'no')->where('event_id', $id)->count();
