@@ -18,7 +18,3 @@ Route::get('/events', [\App\Http\Controllers\EventController::class, 'events']);
 Route::get('/event/{id}/applications', [\App\Http\Controllers\ApplicationController::class, 'list']);
 Route::get('/event/{id}', [\App\Http\Controllers\EventController::class, 'show']);
 Route::post('/event/{id}', [\App\Http\Controllers\ApplicationController::class, 'create']);
-
-Route::get('/base', function () {
-   return view('base');
-});

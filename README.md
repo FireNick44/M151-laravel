@@ -59,7 +59,7 @@ php artisan key:generate
 4. Start Laragon services, then execute this in the laragon console:
 
 ```
-php artisan migrate
+php artisan migrate:fresh
 ```
 
 5. Seeder:

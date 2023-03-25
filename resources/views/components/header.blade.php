@@ -1,8 +1,10 @@
 <header>
-    <div class="">
-        <img src="{{ asset('svg/logo.svg') }}">
+    <a href="{{ url('/') }}">
+        <div class="headerIMG">
+            <img src="{{ asset('svg/logo.svg') }}">
+        </div>
+    </a>
+    <div class="headerLinks">
+        <a href="{{ url('/events') }}">Alle Events</a>
     </div>
-    ------ <br>
-    Header <br>
-    ------ <br>
 </header>

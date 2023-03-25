@@ -14,19 +14,22 @@
         @foreach($events as $event)
             <tr class="tableWrapper">
                 <td>
-                    <a href="/event/{{$event->id}}">
-                        <h2>
-                            {{ $event -> title }}
-                        </h2>
-                    </a>
+                    <h2>
+                        {{ $event -> title }}
+                    </h2>
+                </td>
+                <td>
                     <small>
                         {{ $event -> date }}
                     </small>
                 </td>
                 <td>
-                    <small>
                         {{ $event -> description }}
-                    </small>
+                </td>
+                <td class="eventApplyLink">
+                    <a href="/event/{{$event->id}}">
+                        Anmelden
+                    </a>
                 </td>
             </tr>
         @endforeach
