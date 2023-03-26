@@ -6,9 +6,11 @@
 @section('title', 'Events')
 
 @section('content')
-    <div class="centered" >
-        <h1>Alle Events</h1>
-    </div>
+    <h1 class="centered">Alle Events</h1>
+
+    @guest
+        <h1 class="centered">Erstelle einen Account um dich für Events Anzumelden</h1>
+    @endguest
 
     <table class="tableWrapper">
         @foreach($events as $event)
@@ -26,11 +28,13 @@
                 <td>
                         {{ $event -> description }}
                 </td>
+                @auth
                 <td class="eventApplyLink">
                     <a href="/event/{{$event->id}}">
                         Anmelden
                     </a>
                 </td>
+                @endauth
             </tr>
         @endforeach
     </table>

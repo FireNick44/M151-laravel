@@ -7,7 +7,25 @@
 
 @section('content')
 
-    <a href="{{$id}}/applications">applicationsdons</a>
+    <h1 class="centered">Anmeldung</h1>
+
+    <table class="tableWrapper">
+        <tr class="tableWrapper">
+            <td>
+                <h2>
+                    {{ $event -> title }}
+                </h2>
+            </td>
+            <td>
+                <small>
+                    {{ $event -> date }}
+                </small>
+            </td>
+            <td>
+                {{ $event -> description }}
+            </td>
+        </tr>
+    </table>
 
     <form action="?" method="post">
         @csrf
@@ -57,5 +75,10 @@
 
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+
+    <div class="centered">
+
+        <a href="{{$id}}/applications"><br><br>Alle Anmeldungen ansehen</a>
+    </div>
 
 @endsection

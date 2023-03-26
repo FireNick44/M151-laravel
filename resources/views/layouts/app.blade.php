@@ -15,7 +15,9 @@
 
 <body>
 <x-header/>
-@yield('content')
+<main>
+    @yield('content')
+</main>
 <x-footer/>
 </body>
 

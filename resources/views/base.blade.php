@@ -3,7 +3,7 @@
 @section('head')
 @endsection
 
-@section('title', 'Events')
+@section('title', 'Register')
 
 @section('content')
 

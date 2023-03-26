@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ApplicationController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +16,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\EventController::class, 'events']);
-Route::get('/events', [\App\Http\Controllers\EventController::class, 'events']);
-Route::get('/event/{id}/applications', [\App\Http\Controllers\ApplicationController::class, 'list']);
-Route::get('/event/{id}', [\App\Http\Controllers\EventController::class, 'show']);
-Route::post('/event/{id}', [\App\Http\Controllers\ApplicationController::class, 'create']);
+Route::get('/', [EventController::class, 'events']);
+Route::get('/events', [EventController::class, 'events']);
+Route::get('/event/{id}/applications', [ApplicationController::class, 'list'])->middleware('auth');
+Route::get('/event/{id}', [EventController::class, 'show'])->middleware('auth');
+Route::post('/event/{id}', [ApplicationController::class, 'create'])->middleware('auth');
+
+Route::get('/register', function () {
+    return view('register');
+})->middleware('guest');
+
+Route::get('/login', function () {
+    return view('login');
+})->middleware('guest')->name('login');
+
+Route::post('/register', [UserController::class, 'create'])->middleware('guest');
+Route::post('/login', [UserController::class, 'login'])->middleware('guest');
+
+Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
