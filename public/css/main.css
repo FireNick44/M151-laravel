@@ -29,6 +29,17 @@ p {
     margin-top: 20px;
 }
 
+p.error {
+    min-height: calc(100vh - 144px - 116px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    font-weight: bolder;
+    font-style: normal;
+}
+
 pre code {
     white-space: normal;
 }
@@ -179,6 +190,35 @@ form {
     background-color: #0069d9;
 }
 
+.btnLogout {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #ec3131;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btnLogout:hover {
+    background-color: #ec3131;
+}
+
+.headerLinks{
+    margin-right: 20px;
+
+}
+
+.headerLinks a{
+    color: #1a202c;
+    padding: 10px;
+    text-decoration: none;
+}
+
 .centered{
     width: 100%;
     display: flex;
@@ -241,9 +281,13 @@ footer{
 .eventApplyLink a {
     color: white;
     padding: 10px;
-    border: solid 1px #000000;
+    border: solid 2px #000000;
     border-radius: 12px;
     background-color: #aaa;
     font-size: 14px;
     margin-top: 10px;
+}
+
+.red{
+    color: #ec3131;
 }

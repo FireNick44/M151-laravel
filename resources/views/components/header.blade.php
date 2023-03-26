@@ -9,7 +9,7 @@
         @auth
             <form action="/logout" method="post">
                 @csrf
-                <button type="submit" class="btn btn-primary">Ausloggen</button>
+                <button type="submit" class="btnLogout btn-primary">Ausloggen</button>
             </form>
         @else
             <a href="{{ url('/login') }}">Einloggen</a>

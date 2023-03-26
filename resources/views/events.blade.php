@@ -6,11 +6,12 @@
 @section('title', 'Events')
 
 @section('content')
-    <h1 class="centered">Alle Events</h1>
 
     @guest
-        <h1 class="centered">Erstelle einen Account um dich für Events Anzumelden</h1>
+        <h1 class="centered red">Erstelle einen Account um dich für Events Anzumelden!!!</h1>
     @endguest
+
+    <h1 class="centered">Alle Events</h1>
 
     <table class="tableWrapper">
         @foreach($events as $event)
