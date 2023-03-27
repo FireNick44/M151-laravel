@@ -34,3 +34,11 @@ Route::post('/register', [UserController::class, 'create'])->middleware('guest')
 Route::post('/login', [UserController::class, 'login'])->middleware('guest');
 
 Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
+
+Route::get('/create', function () {
+    return view('create');
+})->middleware('admin');
+
+Route::post('/create', [EventController::class, 'create'])->middleware('admin');
+
+

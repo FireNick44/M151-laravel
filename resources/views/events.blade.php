@@ -11,6 +11,14 @@
         <h1 class="centered red">Erstelle einen Account um dich für Events Anzumelden!!!</h1>
     @endguest
 
+
+    @if(session()->has('event_created'))
+        <div class="flash">
+            {{session('event_created')}}
+        </div>
+    @endif
+
+
     <h1 class="centered">Alle Events</h1>
 
     <table class="tableWrapper">

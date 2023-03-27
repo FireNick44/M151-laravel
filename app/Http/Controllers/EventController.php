@@ -31,4 +31,19 @@ class EventController extends Controller
             'events' => $events
         ]);
     }
+
+    public function create(){
+
+        $data  = request()->validate([
+            'title' => 'required',
+            'date' => 'required',
+            'description' => 'required'
+        ]);
+
+        $event = new Event();
+        $event->fill($data);
+        $event->save();
+
+        return redirect('/events')->with('event_created', 'Event wurde erfolgreich erstellt!');
+    }
 }

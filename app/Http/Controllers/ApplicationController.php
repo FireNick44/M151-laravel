@@ -17,15 +17,13 @@ class ApplicationController extends Controller
             'answer'=> ['required','max:200'],
         ]);
 
-        $request = request();
-
         $application = new \App\Models\Application();
         $application->fill($data);
         $application->session_id = session()->getId();
         $application->event_id = $id;
         $application->save();
 
-        return redirect('/event/' . $id);
+        return redirect('/event/' . $id . '/applications');
     }
     public function list($id){
 

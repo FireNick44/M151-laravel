@@ -193,6 +193,7 @@ form {
 .btnLogout {
     display: inline-block;
     padding: 10px 20px;
+    margin-left: 20px;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
@@ -205,12 +206,13 @@ form {
 }
 
 .btnLogout:hover {
-    background-color: #ec3131;
+    background-color: #d32020;
 }
 
 .headerLinks{
+    display: flex;
+    flex-direction: row-reverse;
     margin-right: 20px;
-
 }
 
 .headerLinks a{
@@ -281,7 +283,7 @@ footer{
 .eventApplyLink a {
     color: white;
     padding: 10px;
-    border: solid 2px #000000;
+    border: none;
     border-radius: 12px;
     background-color: #aaa;
     font-size: 14px;

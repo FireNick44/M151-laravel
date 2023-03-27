@@ -11,9 +11,16 @@
                 @csrf
                 <button type="submit" class="btnLogout btn-primary">Ausloggen</button>
             </form>
-        @else
+        @endauth
+
+        @guest
             <a href="{{ url('/login') }}">Einloggen</a>
             <a href="{{ url('/register') }}">Registrieren</a>
-        @endauth
+        @endguest
+
+        @can('admin')
+            <button onclick="location.href = '/create';" class="btn btn-primary">Event erstellen</button>
+        @endcan
+
     </div>
 </header>
