@@ -44,6 +44,6 @@ class EventController extends Controller
         $event->fill($data);
         $event->save();
 
-        return redirect('/events')->with('event_created', 'Event wurde erfolgreich erstellt!');
+        return redirect('/events')->with('status_update', 'Event wurde erfolgreich erstellt!');
     }
 }

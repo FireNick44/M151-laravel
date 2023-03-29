@@ -23,7 +23,7 @@ class ApplicationController extends Controller
         $application->event_id = $id;
         $application->save();
 
-        return redirect('/event/' . $id . '/applications');
+        return redirect('/event/' . $id)->with('status_update', 'Sie haben sich für das Event angemeldet');
     }
     public function list($id){
 

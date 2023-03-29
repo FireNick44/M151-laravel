@@ -12,9 +12,9 @@
     @endguest
 
 
-    @if(session()->has('event_created'))
-        <div class="flash">
-            {{session('event_created')}}
+    @if(session()->has('status_update'))
+        <div class="flash" id="flash">
+            {{session('status_update')}}
         </div>
     @endif
 

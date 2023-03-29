@@ -21,7 +21,7 @@ class UserController extends Controller
         $user = \App\Models\User::create($data);
         auth()->login($user);
 
-        return redirect('/');
+        return redirect('/')->with('status_update', 'Account wurde erfofgreich erstellt!');
     }
 
     public function login()
@@ -34,7 +34,7 @@ class UserController extends Controller
         if (Auth::attempt($data)) {
             request()->session()->regenerate();
 
-            return redirect()->intended('/');
+            return redirect()->intended('/')->with('status_update', 'Erfolgreich angemeldet');
         }
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
@@ -44,6 +44,6 @@ class UserController extends Controller
     {
         auth()->logout();
 
-        return redirect('/');
+        return redirect('/')->with('status_update', 'Sie haben sich abgemedet');
     }
 }

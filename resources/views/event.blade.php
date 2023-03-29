@@ -7,6 +7,12 @@
 
 @section('content')
 
+    @if(session()->has('status_update'))
+        <div class="flash">
+            {{session('status_update')}}
+        </div>
+    @endif
+
     <h1 class="centered">Anmeldung</h1>
 
     <table class="tableWrapper">
