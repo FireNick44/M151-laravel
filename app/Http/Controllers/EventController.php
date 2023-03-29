@@ -16,14 +16,6 @@ class EventController extends Controller
         ]);
     }
 
-    public function list()
-    {
-        $events = Event::all();
-        return view('events', [
-            'events' => $events
-        ]);
-    }
-
     public function events()
     {
         $events = Event::all();

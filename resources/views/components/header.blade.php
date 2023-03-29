@@ -19,7 +19,7 @@
         @endguest
 
         @can('admin')
-            <button onclick="location.href = '/create';" class="btn btn-primary">Event erstellen</button>
+            <button onclick="location.href = '/events/create';" class="btn btn-primary">Event erstellen</button>
         @endcan
 
     </div>

@@ -8,7 +8,7 @@
 @section('content')
     <h1 class="centered">Event erstellen</h1>
 
-    <form action="/create" method="post">
+    <form action="?" method="post">
         @csrf
 
         <div class="form-group">
@@ -29,7 +29,7 @@
 
         <div class="form-group">
             <label for="description">Beschreibung:</label>
-            <input type="textarea" name="description" id="description" placeholder="Beschreibung" class="@error('description') is-invalid @enderror" value="{{ old('description') }}">
+            <input type="text" name="description" id="description" placeholder="Beschreibung" class="@error('description') is-invalid @enderror" value="{{ old('description') }}">
             @error('description')
             <div class="invalid-feedback">{{ $message }}</div>
             @enderror

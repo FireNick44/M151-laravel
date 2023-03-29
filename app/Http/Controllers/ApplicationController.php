@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Application;
+use App\Models\Event;
 use Illuminate\Http\Request;
 
 class ApplicationController extends Controller
@@ -28,10 +29,9 @@ class ApplicationController extends Controller
     public function list($id){
 
 
-        //$applications = $event
+        $applications = Event::findorfail($id)->application->where('answer', 'yes');
+        $declinedApplications = Event::findorfail($id)->application->where('answer', 'no')->count();
 
-        $applications = Application::where('answer', 'yes')->where('event_id', $id)->get();
-        $declinedApplications = Application::where('answer', 'no')->where('event_id', $id)->count();
         return view('applications',
             [
                 'eventId' => $id,

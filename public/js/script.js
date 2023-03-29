@@ -5,15 +5,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
 async function status() {
 
-    var status_update = document.getElementById("flash") !== null;
-
-    console.log(status_update)
-
-    if(status_update){
+    if(document.getElementById("flash") !== null){
         await delay(3000);
-
-        let x = document.getElementById("flash")
-        x.classList.toggle("flashed");
+        document.getElementById("flash").classList.toggle("flashed");
     }
 }
 

@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use http\Client\Curl\User;
-use Illuminate\Http\Request;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
@@ -18,7 +17,7 @@ class UserController extends Controller
 
         $data['password'] = bcrypt($data['password']);
 
-        $user = \App\Models\User::create($data);
+        $user = User::create($data);
         auth()->login($user);
 
         return redirect('/')->with('status_update', 'Account wurde erfofgreich erstellt!');
@@ -40,6 +39,7 @@ class UserController extends Controller
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
     }
+
     public function logout()
     {
         auth()->logout();

@@ -11,4 +11,8 @@ class Event extends Model
 
     public $timestamps = false;
     public $guarded = [];
+
+    public function application(){
+        return $this->hasMany(Application::class);
+    }
 }

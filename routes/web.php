@@ -35,10 +35,8 @@ Route::post('/login', [UserController::class, 'login'])->middleware('guest');
 
 Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
-Route::get('/create', function () {
+Route::get('/events/create', function () {
     return view('create');
 })->middleware('admin');
 
-Route::post('/create', [EventController::class, 'create'])->middleware('admin');
-
-
+Route::post('/events/create', [EventController::class, 'create'])->middleware('admin');
